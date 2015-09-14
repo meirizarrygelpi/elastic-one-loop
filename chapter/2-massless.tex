@@ -1,0 +1,218 @@
+\chapter{Massless Medium}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this chapter we consider one-loop contributions that involve a massless medium.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Box}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The box correlator in a massless medium $A$ is:
+\begin{equation}
+	\mathcal{B}_{A}(x) = G_{A}(x_{1}| x_{2}) G_{\Phi}(x_{3}| x_{1}) G_{A}(x_{3}| x_{4}) G_{\Psi}(x_{4}| x_{2}).
+	\label{eq:box_A}
+\end{equation}
+In terms of four Schwinger moduli you have
+\begin{equation}
+	\mathcal{B}_{A} = \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \mathrm{d}T_{12} \mathrm{d}T_{31} \mathrm{d}T_{34} \mathrm{d}T_{42} \left( \frac{1}{T_{12} T_{31} T_{34} T_{42}} \right)^{D/2} \exp{\left[- \frac{1}{2} B_{A}(x, T) \right]},
+\end{equation}
+where
+\begin{equation}
+	B_{A} = \frac{1}{T_{12}} |x_{12}|^{2} + \frac{1}{T_{31}} |x_{31}|^{2} + m_{\Phi}^{2} T_{31} + \frac{1}{T_{34}} |x_{34}|^{2} + \frac{1}{T_{42}} |x_{42}|^{2} + m_{\Psi}^{2} T_{42}.
+\end{equation}
+The box amplitude follows from the Fourier transform:
+\begin{equation}
+	\widehat{\mathcal{B}}_{A}(p) = \int \int \int \int \mathrm{d}x_{1} \mathrm{d}x_{2} \mathrm{d}x_{3} \mathrm{d}x_{4} \, \mathcal{B}_{A}(x) \exp{\left[ i \mathbb{F}(x, p) \right]},
+\end{equation}
+with $\mathbb{F}$ given by (\ref{eq:F}). Note that
+\begin{equation}
+	 x_{12} + x_{31} - x_{34} - x_{42} = 0.
+\end{equation}
+That is,
+\begin{equation}
+	|x_{34}|^{2} = |x_{12} + x_{31} - x_{42}|^{2}.
+\end{equation}
+We make the change of variables:
+\begin{equation}
+	\mathrm{d}x_{1} \mathrm{d}x_{2} \mathrm{d}x_{3} \mathrm{d}x_{4} \sim \mathrm{d}X \mathrm{d}x_{12} \mathrm{d}x_{31} \mathrm{d}x_{42} = \int \mathrm{d}X \mathrm{d}x_{12} \mathrm{d}x_{31} \mathrm{d}x_{34} \mathrm{d}x_{42} \delta(x_{12} + x_{31} - x_{34} - x_{42}),
+\end{equation}
+and use
+\begin{equation}
+	\delta(x_{12} + x_{31} - x_{34} - x_{42}) = \int \mathrm{d}q \, \exp{\left[-i q \cdot (x_{12} + x_{31} - x_{34} - x_{42}) \right]},
+\end{equation}
+to perform the integration over the spacetime positions:
+\begin{equation}
+	\widehat{\mathcal{B}}_{A}(p) = \delta(P) \int \mathrm{d}q \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \mathrm{d}T_{12} \mathrm{d}T_{31} \mathrm{d}T_{34} \mathrm{d}T_{42} \, \exp{\left[- \frac{1}{2} \widehat{B}_{A}(p, q, T) \right]},
+	\label{eq:hat_calB_A}
+\end{equation}
+where
+\begin{equation}
+	\widehat{B}_{A} = |q - p_{12}|^{2} T_{12} + \left(|q + p_{31}|^{2} + m_{\Phi}^{2} \right) T_{31} + |q|^{2} T_{34} + \left(|q - p_{42}|^{2} + m_{\Psi}^{2} \right) T_{42}.
+\end{equation}
+This result is kinematically exact.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sudakov Moduli}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+One can integrate over the Schwinger moduli in (\ref{eq:hat_calB_A}) to obtain:
+\begin{equation}
+	\widehat{\mathcal{B}}_{A}(p) = \delta(P) \int \mathrm{d}q \left( \frac{2}{|q - p_{12}|^{2}} \right) \left( \frac{2}{|q + p_{31}|^{2} + m_{\Phi}^{2}} \right) \left( \frac{2}{|q|^{2}} \right) \left( \frac{2}{|q - p_{42}|^{2} + m_{\Psi}^{2}} \right).
+	\label{eq:sudakov_B_A}
+\end{equation}
+In this expression $q$ plays the role of a (virtual) loop momentum variable.
+
+The Dirac delta enforces the $P = 0$ constraint. Once this constraint is enforced, it follows that
+\begin{equation}
+	p_{12} = p_{1} - p_{3} = p_{4} - p_{2}, \qquad p_{31} = p_{3}, \qquad p_{42} = p_{4}.
+\end{equation}
+Let $k_{3}$ and $k_{4}$ be null spacetime vectors with units of mass. The Sudakov null decomposition of $p_{3}$ and $p_{4}$ is as follows:
+\begin{equation}
+	p_{3} = k_{3} + c_{34} k_{4}, \qquad p_{4} = k_{4} + c_{43} k_{3}.
+\end{equation}
+In terms of $p_{3}$ and $p_{4}$, you have
+\begin{equation}
+	k_{3} = \frac{p_{3} - c_{34} p_{4}}{1 - c_{34} c_{43}}, \qquad k_{4} = \frac{p_{4} - c_{43} p_{3}}{1 - c_{34} c_{43}}.
+	\label{eq:k3_and_k4}
+\end{equation}
+From $|p_{3}|^{2} = -m_{3}^{2}$ and $|p_{4}|^{2} = -m_{4}^{2}$ it follows that
+\begin{equation}
+	c_{34} = - \frac{m_{3}^{2}}{2 (k_{3} \cdot k_{4})}, \qquad c_{43} = - \frac{m_{4}^{2}}{2 (k_{3} \cdot k_{4})} \quad \Longrightarrow \quad \frac{c_{34}}{c_{43}} = \frac{m_{3}^{2}}{m_{4}^{2}}.
+\end{equation}
+Using $|k_{3}|^{2} = 0$ and $|k_{4}|^{2} = 0$ you find quadratic equations for $c_{34}$ and $c_{43}$:
+\begin{equation}
+	m_{4}^{2} c_{34}^{2} + (m_{3}^{2} + m_{4}^{2} - s) c_{34} + m_{3}^{2} = 0, \qquad m_{3}^{2} c_{43}^{2} + (m_{3}^{2} + m_{4}^{2} - s) c_{43} + m_{4}^{2} = 0.
+\end{equation}
+Solving each quadratic equation yields
+\begin{equation}
+	c_{43} = \left( \frac{m_{4}^{2}}{m_{3}^{2}} \right) c_{34}, \qquad c_{34} = \frac{s - m_{3}^{2} - m_{4}^{2} \pm \sqrt{\Lambda(s)}}{2 m_{4}^{2}}.
+\end{equation}
+Note that $c_{34}$ and $c_{43}$ are (dimensionless) functions that can be written in terms of two (dimensionless) ratios
+\begin{equation}
+	\frac{s}{m_{3} m_{4}}, \qquad \frac{m_{3}}{m_{4}}.
+\end{equation}
+From $s = -|p_{3} + p_{4}|^{2}$ it follows that
+\begin{equation}
+	2 (k_{3} \cdot k_{4}) = - \frac{s}{(1 + c_{34})(1 + c_{43})} = -m_{3} m_{4} \left[ \frac{2 m_{3} m_{4}}{s - m_{3}^{2} - m_{4}^{2} \pm \sqrt{\Lambda(s)}} \right].
+\end{equation}
+This can also be written as
+\begin{equation}
+	2 (k_{3} \cdot k_{4}) = -m_{3} m_{4} \left[ \frac{s - m_{3}^{2} - m_{4}^{2} \mp \sqrt{\Lambda(s)}}{2 m_{3} m_{4}} \right].
+\end{equation}
+Next you decompose the loop momentum $q$ as
+\begin{equation}
+	q = a_{q} k_{3} + b_{q} k_{4} + q_{\perp}.
+\end{equation}
+Here $a_{q}$ and $b_{q}$ are Sudakov moduli. The integration measure over $q$ becomes
+\begin{equation}
+	\mathrm{d}q = \sqrt{|k_{3}|^{2} |k_{4}|^{2} - (k_{3} \cdot k_{4})^{2}} \mathrm{d}a_{q} \mathrm{d}b_{q} \mathrm{d}q_{\perp}.
+\end{equation}
+Note that the volume measure for $q_{\perp}$ is in $D-2$ spacetime dimensions. Since $|k_{3}|^{2} = 0$ and $|k_{4}|^{2} = 0$, the overall factor becomes $\sqrt{-(k_{3} \cdot k_{4})^{2}}$.
+
+Now you write each of the factors in the denominator in (\ref{eq:sudakov_B_A}) in terms of the Sudakov moduli and the transversal momentum $q_{\perp}$. First write
+\begin{equation}
+	p_{12} = a_{12} k_{3} + b_{12} k_{4} + p_{\perp}.
+\end{equation}
+Since $p_{12}$ is known, $a_{12}$, $b_{12}$ and $p_{\perp}$ are also known. From $k_{3} \cdot p_{12}$ and $k_{4} \cdot p_{12}$ it follows that
+\begin{equation}
+	b_{12} = \frac{k_{3} \cdot p_{12}}{k_{3} \cdot k_{4}}, \qquad a_{12} = \frac{k_{4} \cdot p_{12}}{k_{3} \cdot k_{4}}.
+\end{equation}
+Using (\ref{eq:k3_and_k4}) leads to:
+\begin{equation}
+	k_{3} \cdot p_{12} = \frac{(p_{3} - c_{34} p_{4}) \cdot (p_{1} - p_{3})}{1 - c_{34} c_{43}}, \qquad k_{4} \cdot p_{12} = \frac{(p_{4} - c_{43} p_{3}) \cdot (p_{1} - p_{3})}{1 - c_{34} c_{43}}.
+\end{equation}
+Recall that
+\begin{align}
+	s = -| p_{3} + p_{4} |^{2} \quad &\Rightarrow \quad p_{3} \cdot p_{4} = \frac{m_{3}^{2} + m_{4}^{2} - s}{2}, \\
+	t = -| p_{1} - p_{3} |^{2} \quad &\Rightarrow \quad p_{1} \cdot p_{3} = \frac{t - m_{1}^{2} - m_{3}^{2}}{2}, \\
+	u = -| p_{1} - p_{4} |^{2} \quad &\Rightarrow \quad p_{1} \cdot p_{4} = \frac{u - m_{1}^{2} - m_{4}^{2}}{2}. \\
+\end{align}
+Thus,
+\begin{equation}
+	k_{3} \cdot p_{12} = \frac{t}{2} \left( \frac{1 + c_{34}}{1 - c_{34} c_{43}} \right), \qquad k_{4} \cdot p_{12} = -\frac{t}{2} \left( \frac{1 + c_{43}}{1 - c_{34} c_{43}} \right).
+\end{equation}
+Hence,
+\begin{equation}
+	a_{12} = \frac{t}{s} \left[ \frac{(1 + c_{34}) (1 + c_{43})^{2}}{1 - c_{34} c_{43}} \right], \qquad b_{12} = -\frac{t}{s} \left[ \frac{(1 + c_{34})^{2} (1 + c_{43})}{1 - c_{34} c_{43}} \right].
+\end{equation}
+Using $|p_{12}|^{2} = -t$ it follows that
+\begin{equation}
+	|p_{\perp}|^{2} = -t - 2 a_{12} b_{12} (k_{3} \cdot k_{4}) = -t - 2 \left[ \frac{(k_{3} \cdot p_{12}) (k_{4} \cdot p_{12})}{(k_{3} \cdot k_{4})} \right],
+\end{equation}
+which can be written as
+\begin{equation}
+	|p_{\perp}|^{2} = -t \left( 1 + \frac{t}{s} \frac{(1 + c_{34})^{2}(1 + c_{43})^{2}}{(1 - c_{34} c_{43})^{2}} \right).
+\end{equation}
+The terms in the denominator become:
+\begin{align}
+	|q - p_{12}|^{2} &= 2 (a_{q} - a_{12})(b_{q} - b_{12})(k_{3} \cdot k_{4}) + |q_{\perp} - p_{\perp}|^{2}, \\
+	|q + p_{3}|^{2} + m_{\Phi}^{2} &= 2 (a_{q} + 1)(b_{q} + c_{34})(k_{3} \cdot k_{4}) + |q_{\perp}|^{2} + m_{\Phi}^{2}, \\
+	|q|^{2} &= 2 a_{q} b_{q} (k_{3} \cdot k_{4}) + |q_{\perp}|^{2}, \\
+	|q - p_{4}|^{2} + m_{\Psi}^{2} &= 2 (a_{q} - c_{43})(b_{q} - 1)(k_{3} \cdot k_{4}) + |q_{\perp}|^{2} + m_{\Psi}^{2}.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Feynman Moduli}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+After integrating over $q$ in (\ref{eq:hat_calB_A}), you find:
+\begin{equation}
+	\widehat{\mathcal{B}}_{A}(p) = \delta(P) \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \frac{\mathrm{d}T_{13} \mathrm{d}T_{21} \mathrm{d}T_{42} \mathrm{d}T_{34}}{(T_{13} + T_{21} + T_{42} + T_{34})^{D/2}} \exp{\left[ \frac{1}{2} \tilde{B}_{A}(p, T) \right]},
+\end{equation}
+where
+\begin{equation}
+	\tilde{B}_{A} = t T_{21} + \frac{|T_{13} p_{13} - T_{21} p_{21} - T_{42} p_{42}|^{2}}{T_{13} + T_{21} + T_{42} + T_{34}}.
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Regge Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forward-JWKB Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Crossed Box}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The cross-box correlator is given by
+\begin{equation}
+	\mathcal{C}_{A}(x) = G_{\Phi}(x_{1}| x_{3}) G_{A}(x_{4}| x_{1}) G_{\Psi}(x_{2}| x_{4}) G_{A}(x_{3}| x_{2}),
+\end{equation}
+but this expression is related to the box correlator (\ref{eq:box_A}) by swapping $x_{2} \longleftrightarrow x_{4}$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Regge Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forward-JWKB Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vertex Corrections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+There are two one-loop vertex corrections:
+\begin{align}
+	\mathcal{V}_{\Phi}(x) &= \delta(x_{2} - x_{4}) G_{A}(x_{1} | x_{3}) \int \mathrm{d}y \, G_{A}(y| x_{2}) G_{\Phi}(y| x_{1}) G_{\Phi}(y| x_{3}), \\
+	\mathcal{V}_{\Psi}(x) &= \delta(x_{1} - x_{3}) G_{A}(x_{2} | x_{4}) \int \mathrm{d}y \, G_{A}(y| x_{1}) G_{\Psi}(y| x_{2}) G_{\Psi}(y| x_{4}).
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Regge Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forward-JWKB Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vaccum Polarizations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+There are two one-loop vacuum polarizations:
+\begin{align}
+	\mathcal{W}_{\Phi}(x) &= \delta(x_{1} - x_{3}) \delta(x_{2} - x_{4}) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \, G_{A}(x_{1} | y_{1}) G_{A}(x_{2}| y_{2}) G_{\Phi}(y_{1} | y_{2}) G_{\Phi}(y_{2}| y_{1}), \\
+	\mathcal{W}_{\Psi}(x) &= \delta(x_{1} - x_{3}) \delta(x_{2} - x_{4}) \int \int \mathrm{d}y_{1} \mathrm{d}y_{2} \, G_{A}(x_{1} | y_{1}) G_{A}(x_{2}| y_{2}) G_{\Psi}(y_{1} | y_{2}) G_{\Psi}(y_{2}| y_{1}).
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Regge Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Forward-JWKB Limit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Phase Space}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
