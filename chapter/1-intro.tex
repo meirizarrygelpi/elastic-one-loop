@@ -22,11 +22,11 @@ Here $w$ is a Schwinger modulus.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In the momentum basis, the propagator for a free quantum with mass $m$ is given by
 \begin{equation}
-	\widehat{G}_{m}(p, q) = \left( \frac{2}{|p|^{2} + m^2} \right) \delta(p - q).
+	\widehat{G}_{m}(p, q) = \left( \frac{2}{\abs{p}^{2} + m^2} \right) \delta(p - q).
 \end{equation}
 Using a Schwinger modulus, this can be re-written as
 \begin{equation}
-	\widehat{G}_{m}(p, q) = \delta(p - q) \int\limits_{0}^{\infty} \mathrm{d}T \, \exp{\left[- \left( \frac{|p|^2 + m^2}{2} \right) T\right]}.
+	\widehat{G}_{m}(p, q) = \delta(p - q) \int\limits_{0}^{\infty} \mathrm{d}T \, \exp{\left[- \left( \frac{\abs{p}^2 + m^2}{2} \right) T\right]}.
 \end{equation}
 From the momentum basis, you can go to the position basis via a Fourier transform:
 \begin{equation}
@@ -34,11 +34,11 @@ From the momentum basis, you can go to the position basis via a Fourier transfor
 \end{equation}
 Integration over $p$ and $q$ gives
 \begin{equation}
-	G_{m}(x, y) = \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{D/2} \exp{\left[- \frac{1}{2T}|x - y|^{2} - \frac{1}{2} m^{2}T \right]}.
+	G_{m}(x, y) = \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{D/2} \exp{\left[- \frac{1}{2T}\abs{x - y}^{2} - \frac{1}{2} m^{2}T \right]}.
 \end{equation}
 As a special case, you can take the $m \rightarrow 0$ limit to obtain the propagator for a free massless quantum:
 \begin{equation}
-	G_{0}(x, y) = \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{D/2} \exp{\left[- \frac{1}{2T}|x - y|^{2} \right]} = \left( \frac{2}{|x - y|^{2}} \right)^{(D-2)/2} \Gamma\left( \frac{D - 2}{2} \right).
+	G_{0}(x, y) = \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{D/2} \exp{\left[- \frac{1}{2T}\abs{x - y}^{2} \right]} = \left( \frac{2}{\abs{x - y}^{2}} \right)^{(D-2)/2} \Gamma\left( \frac{D - 2}{2} \right).
 \end{equation}
 This is valid as long as $D \neq 2$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,27 +54,58 @@ A priori, these four energy-momentum vectors are independent. But as you will se
 \end{equation}
 There are three Mandelstam invariants:
 \begin{equation}
-	s = -|p_{1} + p_{2}|^{2}, \qquad t = -|p_{1} - p_{3}|^{2}, \qquad u = -|p_{1} - p_{4}|^{2}.
+	s = -\abs{p_{1} + p_{2}}^{2}, \qquad t = -\abs{p_{1} - p_{3}}^{2}, \qquad u = -\abs{p_{1} - p_{4}}^{2}.
 \end{equation}
 Due to the conservation constraint, it follows that
 \begin{equation}
-	s + t + u = 2 m_{\Phi}^{2} + 2 m_{\Psi}^{2}.
+	s + t + u = 2 m_{1}^{2} + 2 m_{2}^{2}.
 \end{equation}
 An important function is
 \begin{equation}
-	\Lambda(s) = [s - (m_{\Phi} - m_{\Psi})^{2}] [s - (m_{\Phi} + m_{\Psi})^{2}].
+	\Lambda(s) = [s - (m_{1} - m_{2})^{2}] [s - (m_{1} + m_{2})^{2}].
 \end{equation}
 This is known as the K\"{a}ll\'{e}n function. Note that $\Lambda(s)$ can also be written as
 \begin{equation}
-	\Lambda(s) = (s - m_{\Phi}^{2} - m_{\Psi}^{2})^{2} - 4 m_{\Phi}^{2} m_{\Psi}^{2}.
+	\Lambda(s) = (s - m_{1}^{2} - m_{2}^{2})^{2} - 4 m_{1}^{2} m_{2}^{2}.
 \end{equation}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Change of Variables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this section I will discuss different changes of position variables, and the corresponding conjugate momenta.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Incoming Basis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Consider the following expression:
 \begin{equation}
 	\mathbb{F} \equiv x_{1} \cdot p_{1} + x_{2} \cdot p_{2} - x_{3} \cdot p_{3} - x_{4} \cdot p_{4}.
 	\label{eq:F}
 \end{equation}
 Now make the change of variables
+\begin{equation}
+	X \equiv \frac{x_{1} + x_{2} + x_{3} + x_{4}}{4}, \quad x_{34} \equiv x_{3} - x_{4}, \quad x_{31} \equiv x_{3} - x_{1}, \quad x_{42} \equiv x_{4} - x_{2}.
+\end{equation}
+The inverse relation is
+\begin{align}
+	x_{1} &= \frac{4 X + 2x_{34} - 3x_{31} + x_{42}}{4}, \\
+	x_{2} &= \frac{4 X + 2x_{34} + x_{31} - 3x_{42}}{4}, \\
+	x_{3} &= \frac{4 X + 2x_{34} + x_{31} + x_{42}}{4}, \\
+	x_{4} &= \frac{4 X - 2x_{34} + x_{31} + x_{42}}{4}.
+\end{align}
+Then $\mathbb{F}$ can be written as
+\begin{equation}
+	\mathbb{F} \equiv X \cdot P + x_{34} \cdot p_{34} - x_{31} \cdot p_{31} - x_{42} \cdot p_{42},
+\end{equation}
+where
+\begin{align}
+	P &= p_{1} + p_{2} - p_{3} - p_{4}, \\
+	p_{34} &= \frac{p_{1} - p_{2} - p_{3} + p_{4}}{2}, \\
+	p_{31} &= \frac{3p_{1} - p_{2} + p_{3} + p_{4}}{4}, \\
+	p_{42} &= \frac{-p_{1} + 3p_{2} + p_{3} + p_{4}}{4}.
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Outgoing Basis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Consider (\ref{eq:F}) and make the change of variables
 \begin{equation}
 	X \equiv \frac{x_{1} + x_{2} + x_{3} + x_{4}}{4}, \quad x_{12} \equiv x_{1} - x_{2}, \quad x_{31} \equiv x_{3} - x_{1}, \quad x_{42} \equiv x_{4} - x_{2}.
 \end{equation}
