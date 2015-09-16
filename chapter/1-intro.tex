@@ -128,3 +128,38 @@ where
 	p_{42} &= \frac{p_{1} + p_{2} - p_{3} + 3p_{4}}{4}.
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Massless Propagators Between Two Points}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Consider the following correlator consisting of $L + 1$ massless propagators in $D - 2$ spacetime dimensions connecting two points in spacetime:
+\begin{equation}
+	\mathcal{T}_{L}(x) = \delta(x_{3} - x_{1}) \delta(x_{4} - x_{2}) \prod_{i = 1}^{L+1} G_{0}(x_{3}|x_{4}).
+\end{equation}
+This correlator describes an $L$-loop level process. In $D - 2$ spacetime dimensions, the massless propagator is
+\begin{equation}
+	G_{0}(x|y) = \left( \frac{2}{\abs{x - y}^{2}} \right)^{(D - 4)/2} \Gamma\left( \frac{D - 4}{2} \right).
+\end{equation}
+Let $D = 4 + 2 \epsilon$. Then $\mathcal{T}_{L}$ becomes
+\begin{equation}
+	\mathcal{T}_{L}(x) = \delta(x_{3} - x_{1}) \delta(x_{4} - x_{2}) \left( \frac{2}{\abs{x_{34}}^{2}} \right)^{(L+1)\epsilon} \left[ \Gamma\left( \epsilon \right) \right]^{L+1}.
+\end{equation}
+Taking the Fourier transform, leads to
+\begin{equation}
+	\widehat{\mathcal{T}}_{L}(p) = \left[ \Gamma\left( \epsilon \right) \right]^{L+1} \delta(P) \int \mathrm{d}x_{34} \left( \frac{2}{\abs{x_{34}}^{2}} \right)^{(L+1)\epsilon} \exp{\left( i x_{34} \cdot p_{34} \right)}.
+\end{equation}
+Using a Schwinger modulus leads to
+\begin{equation}
+	\widehat{\mathcal{T}}_{L} = \frac{\left[ \Gamma\left( \epsilon \right) \right]^{L+1}}{\Gamma\left[ (L+1)\epsilon \right]} \delta(P) \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{1 - (L+1)\epsilon} \exp{\left[ - \frac{1}{2} \abs{x_{34}}^{2} T + i x_{34} \cdot p_{34} \right]}.
+\end{equation}
+Integration over $x_{34}$ gives
+\begin{equation}
+	\widehat{\mathcal{T}}_{L} = \frac{\left[ \Gamma\left( \epsilon \right) \right]^{L+1}}{\Gamma\left[ (L+1)\epsilon \right]} \delta(P) \int\limits_{0}^{\infty} \mathrm{d}T \left( \frac{1}{T} \right)^{2 - L\epsilon} \exp{\left[ - \frac{1}{2T} \abs{p_{34}}^{2} \right]}.
+\end{equation}
+Finally, integrating over $T$ gives
+\begin{equation}
+	\widehat{\mathcal{T}}_{L} = \frac{\left[ \Gamma\left( \epsilon \right) \right]^{L+1} \Gamma(1 - L\epsilon) }{\Gamma\left[ (L+1)\epsilon \right]} \delta(P) \left(- \frac{2}{t} \right) \left( - \frac{t}{2} \right)^{L\epsilon},
+\end{equation}
+where I have used $\abs{p_{34}}^{2} = -t$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Massive Propagators Between Two Points}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...

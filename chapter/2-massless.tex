@@ -42,9 +42,9 @@ to perform the integration over the spacetime positions:
 	\widehat{\mathcal{B}}_{0}(p) = \delta(P) \int \mathrm{d}q \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \int\limits_{0}^{\infty} \mathrm{d}T_{12} \mathrm{d}T_{31} \mathrm{d}T_{34} \mathrm{d}T_{42} \, \exp{\left[- \frac{1}{2} \widehat{B}_{0}(p, q, T) \right]},
 	\label{eq:hat_calB_A}
 \end{equation}
-where NEEDS FIX
+where
 \begin{equation}
-	\widehat{B}_{0} = \abs{q - p_{12}}^{2} T_{12} + \left(\abs{q + p_{31}}^{2} + m_{1}^{2} \right) T_{31} + \abs{q}^{2} T_{34} + \left(\abs{q - p_{42}}^{2} + m_{2}^{2} \right) T_{42}.
+	\widehat{B}_{0} = \abs{q}^{2} T_{12} + \left(\abs{q - p_{31}}^{2} + m_{1}^{2} \right) T_{31} + \abs{q - p_{34}}^{2} T_{34} + \left(\abs{q + p_{42}}^{2} + m_{2}^{2} \right) T_{42}.
 \end{equation}
 This result is kinematic-exact.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -52,102 +52,102 @@ This result is kinematic-exact.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 One can integrate over the Schwinger moduli in (\ref{eq:hat_calB_A}) to obtain:
 \begin{equation}
-	\widehat{\mathcal{B}}_{A}(p) = \delta(P) \int \mathrm{d}q \left( \frac{2}{\abs{q - p_{12}}^{2}} \right) \left( \frac{2}{\abs{q + p_{31}}^{2} + m_{1}^{2}} \right) \left( \frac{2}{\abs{q}^{2}} \right) \left( \frac{2}{\abs{q - p_{42}}^{2} + m_{2}^{2}} \right).
+	\widehat{\mathcal{B}}_{A}(p) = \delta(P) \int \mathrm{d}q \left( \frac{2}{\abs{q}^{2}} \right) \left( \frac{2}{\abs{q - p_{31}}^{2} + m_{1}^{2}} \right) \left( \frac{2}{\abs{q - p_{34}}^{2}} \right) \left( \frac{2}{\abs{q + p_{42}}^{2} + m_{2}^{2}} \right).
 	\label{eq:sudakov_B_A}
 \end{equation}
 In this expression $q$ plays the role of a (virtual) loop momentum variable.
 
-The Dirac delta enforces the $P = 0$ constraint. Once this constraint is enforced, it follows that
+The Dirac delta enforces the $P = 0$ constraint. Enforcing this constraint leads to
 \begin{equation}
-	p_{12} = p_{1} - p_{3} = p_{4} - p_{2}, \qquad p_{31} = p_{3}, \qquad p_{42} = p_{4}.
+	p_{34} = p_{1} - p_{3} = p_{4} - p_{2}, \qquad p_{31} = p_{1}, \qquad p_{42} = p_{2}.
 \end{equation}
 Thus,
 \begin{equation}
-	\abs{p_{12}}^{2} = -t, \qquad \abs{p_{31}}^{2} = -m_{1}^{2}, \qquad \abs{p_{42}}^{2} = -m_{2}^{2}.
+	\abs{p_{34}}^{2} = -t, \qquad \abs{p_{31}}^{2} = -m_{1}^{2}, \qquad \abs{p_{42}}^{2} = -m_{2}^{2}.
 \end{equation}
-Let $k_{3}$ and $k_{4}$ be null spacetime vectors with units of mass. The Sudakov null decomposition of $p_{3}$ and $p_{4}$ is as follows:
+Let $k_{1}$ and $k_{2}$ be null spacetime vectors with units of mass. The Sudakov null decomposition of $p_{1}$ and $p_{2}$ is as follows:
 \begin{equation}
-	p_{3} = k_{3} + c_{34} k_{4}, \qquad p_{4} = k_{4} + c_{43} k_{3}.
+	p_{1} = k_{1} + c_{12} k_{2}, \qquad p_{2} = k_{2} + c_{21} k_{1}.
 \end{equation}
-In terms of $p_{3}$ and $p_{4}$, you have
+In terms of $p_{1}$ and $p_{2}$, you have
 \begin{equation}
-	k_{3} = \frac{p_{3} - c_{34} p_{4}}{1 - c_{34} c_{43}}, \qquad k_{4} = \frac{p_{4} - c_{43} p_{3}}{1 - c_{34} c_{43}}.
-	\label{eq:k3_and_k4}
+	k_{1} = \frac{p_{1} - c_{12} p_{2}}{1 - c_{12} c_{21}}, \qquad k_{2} = \frac{p_{2} - c_{21} p_{1}}{1 - c_{12} c_{21}}.
+	\label{eq:k1_and_k2}
 \end{equation}
-From $|p_{3}|^{2} = -m_{1}^{2}$ and $|p_{4}|^{2} = -m_{2}^{2}$ it follows that
+From $|p_{1}|^{2} = -m_{1}^{2}$ and $|p_{2}|^{2} = -m_{2}^{2}$ it follows that
 \begin{equation}
-	c_{34} = - \frac{m_{1}^{2}}{2 (k_{3} \cdot k_{4})}, \qquad c_{43} = - \frac{m_{2}^{2}}{2 (k_{3} \cdot k_{4})} \quad \Longrightarrow \quad \frac{c_{34}}{c_{43}} = \frac{m_{1}^{2}}{m_{2}^{2}}.
+	c_{12} = - \frac{m_{1}^{2}}{2 (k_{1} \cdot k_{2})}, \qquad c_{21} = - \frac{m_{2}^{2}}{2 (k_{1} \cdot k_{2})} \quad \Longrightarrow \quad \frac{c_{12}}{c_{21}} = \frac{m_{1}^{2}}{m_{2}^{2}}.
 \end{equation}
-Using $\abs{k_{3}}^{2} = 0$ and $\abs{k_{4}}^{2} = 0$ you find quadratic equations for $c_{34}$ and $c_{43}$:
+Using $\abs{k_{1}}^{2} = 0$ and $\abs{k_{2}}^{2} = 0$ you find quadratic equations for $c_{12}$ and $c_{21}$:
 \begin{equation}
-	m_{4}^{2} c_{34}^{2} + (m_{3}^{2} + m_{4}^{2} - s) c_{34} + m_{3}^{2} = 0, \qquad m_{3}^{2} c_{43}^{2} + (m_{3}^{2} + m_{4}^{2} - s) c_{43} + m_{4}^{2} = 0.
+	m_{2}^{2} c_{12}^{2} + \left(m_{1}^{2} + m_{2}^{2} - s\right) c_{12} + m_{1}^{2} = 0, \qquad m_{1}^{2} c_{21}^{2} + \left(m_{1}^{2} + m_{2}^{2} - s\right) c_{21} + m_{2}^{2} = 0.
 \end{equation}
 Solving each quadratic equation yields
 \begin{equation}
-	c_{43} = \left( \frac{m_{4}^{2}}{m_{3}^{2}} \right) c_{34}, \qquad c_{34} = \frac{s - m_{3}^{2} - m_{4}^{2} \pm \sqrt{\Lambda(s)}}{2 m_{4}^{2}}.
+	c_{21} = \left( \frac{m_{2}^{2}}{m_{1}^{2}} \right) c_{12}, \qquad c_{12} = \frac{s - m_{1}^{2} - m_{2}^{2} \pm \sqrt{\Lambda(s)}}{2 m_{2}^{2}}.
 \end{equation}
-Note that $c_{34}$ and $c_{43}$ are (dimensionless) functions that can be written in terms of two (dimensionless) ratios
+Note that $c_{12}$ and $c_{21}$ are (dimensionless) functions that can be written in terms of two (dimensionless) ratios
 \begin{equation}
-	\frac{s}{m_{3} m_{4}}, \qquad \frac{m_{3}}{m_{4}}.
+	\frac{s}{m_{1} m_{2}}, \qquad \frac{m_{1}}{m_{2}}.
 \end{equation}
-From $s = -|p_{3} + p_{4}|^{2}$ it follows that
+From $s = {-\abs{p_{1} + p_{2}}^{2}}$ it follows that
 \begin{equation}
-	2 (k_{3} \cdot k_{4}) = - \frac{s}{(1 + c_{34})(1 + c_{43})} = -m_{3} m_{4} \left[ \frac{2 m_{3} m_{4}}{s - m_{3}^{2} - m_{4}^{2} \pm \sqrt{\Lambda(s)}} \right].
+	2 (k_{1} \cdot k_{2}) = - \frac{s}{(1 + c_{12})(1 + c_{21})} = -m_{1} m_{2} \left[ \frac{2 m_{1} m_{2}}{s - m_{1}^{2} - m_{2}^{2} \pm \sqrt{\Lambda(s)}} \right].
 \end{equation}
 This can also be written as
 \begin{equation}
-	2 (k_{3} \cdot k_{4}) = -m_{3} m_{4} \left[ \frac{s - m_{3}^{2} - m_{4}^{2} \mp \sqrt{\Lambda(s)}}{2 m_{3} m_{4}} \right].
+	2 (k_{1} \cdot k_{2}) = -m_{1} m_{2} \left[ \frac{s - m_{1}^{2} - m_{2}^{2} \mp \sqrt{\Lambda(s)}}{2 m_{1} m_{2}} \right].
 \end{equation}
 Next you decompose the loop momentum $q$ as
 \begin{equation}
-	q = a_{q} k_{3} + b_{q} k_{4} + q_{\perp}.
+	q = Q + a_{q} k_{1} + b_{q} k_{2}.
 \end{equation}
 Here $a_{q}$ and $b_{q}$ are Sudakov moduli. The integration measure over $q$ becomes
 \begin{equation}
-	\mathrm{d}q = \sqrt{|k_{3}|^{2} |k_{4}|^{2} - (k_{3} \cdot k_{4})^{2}} \mathrm{d}a_{q} \mathrm{d}b_{q} \mathrm{d}q_{\perp}.
+	\mathrm{d}q = \sqrt{\abs{k_{1}}^{2} \abs{k_{2}}^{2} - \left(k_{1} \cdot k_{2}\right)^{2}} \mathrm{d}a_{q} \mathrm{d}b_{q} \mathrm{d}Q.
 \end{equation}
-Note that the volume measure for $q_{\perp}$ is in $D-2$ spacetime dimensions. Since $|k_{3}|^{2} = 0$ and $|k_{4}|^{2} = 0$, the overall factor becomes $\sqrt{-(k_{3} \cdot k_{4})^{2}}$.
+Note that the volume measure for $Q$ is in $D-2$ spacetime dimensions.
 
-Now you write each of the factors in the denominator in (\ref{eq:sudakov_B_A}) in terms of the Sudakov moduli and the transversal momentum $q_{\perp}$. First write
+Now you write each of the factors in the denominator in (\ref{eq:sudakov_B_A}) in terms of the Sudakov moduli and the transversal momentum $Q$. First write
 \begin{equation}
-	p_{12} = a_{12} k_{3} + b_{12} k_{4} + p_{\perp}.
+	p_{34} = P_{34} + a_{34} k_{1} + b_{34} k_{2}.
 \end{equation}
-Since $p_{12}$ is known, $a_{12}$, $b_{12}$ and $p_{\perp}$ are also known. From $k_{3} \cdot p_{12}$ and $k_{4} \cdot p_{12}$ it follows that
+Since $p_{34}$ is known, $a_{34}$, $b_{34}$, and $P_{34}$ are also known. From $k_{1} \cdot p_{34}$ and $k_{2} \cdot p_{34}$ it follows that
 \begin{equation}
-	b_{12} = \frac{k_{3} \cdot p_{12}}{k_{3} \cdot k_{4}}, \qquad a_{12} = \frac{k_{4} \cdot p_{12}}{k_{3} \cdot k_{4}}.
+	b_{34} = \frac{k_{1} \cdot p_{34}}{k_{1} \cdot k_{2}}, \qquad a_{34} = \frac{k_{2} \cdot p_{34}}{k_{1} \cdot k_{2}}.
 \end{equation}
-Using (\ref{eq:k3_and_k4}) leads to:
+Using (\ref{eq:k1_and_k2}) leads to:
 \begin{equation}
-	k_{3} \cdot p_{12} = \frac{(p_{3} - c_{34} p_{4}) \cdot (p_{1} - p_{3})}{1 - c_{34} c_{43}}, \qquad k_{4} \cdot p_{12} = \frac{(p_{4} - c_{43} p_{3}) \cdot (p_{1} - p_{3})}{1 - c_{34} c_{43}}.
+	k_{1} \cdot p_{34} = \frac{(p_{1} - c_{12} p_{2}) \cdot (p_{1} - p_{3})}{1 - c_{12} c_{21}}, \qquad k_{2} \cdot p_{34} = \frac{(p_{2} - c_{21} p_{1}) \cdot (p_{1} - p_{3})}{1 - c_{12} c_{21}}.
 \end{equation}
 Recall that
 \begin{align}
-	s = -| p_{3} + p_{4} |^{2} \quad &\Rightarrow \quad p_{3} \cdot p_{4} = \frac{m_{3}^{2} + m_{4}^{2} - s}{2}, \\
-	t = -| p_{1} - p_{3} |^{2} \quad &\Rightarrow \quad p_{1} \cdot p_{3} = \frac{t - m_{1}^{2} - m_{3}^{2}}{2}, \\
-	u = -| p_{1} - p_{4} |^{2} \quad &\Rightarrow \quad p_{1} \cdot p_{4} = \frac{u - m_{1}^{2} - m_{4}^{2}}{2}. \\
+	s = -\abs{p_{1} + p_{2}}^{2} \quad &\Rightarrow \quad p_{1} \cdot p_{2} = \frac{m_{1}^{2} + m_{2}^{2} - s}{2}, \\
+	t = -\abs{p_{1} - p_{3}}^{2} \quad &\Rightarrow \quad p_{1} \cdot p_{3} = \frac{t - 2m_{1}^{2}}{2}, \\
+	u = -\abs{p_{2} - p_{3}}^{2} \quad &\Rightarrow \quad p_{2} \cdot p_{3} = \frac{u - m_{1}^{2} - m_{2}^{2}}{2}. \\
 \end{align}
 Thus,
 \begin{equation}
-	k_{3} \cdot p_{12} = \frac{t}{2} \left( \frac{1 + c_{34}}{1 - c_{34} c_{43}} \right), \qquad k_{4} \cdot p_{12} = -\frac{t}{2} \left( \frac{1 + c_{43}}{1 - c_{34} c_{43}} \right).
+	k_{1} \cdot p_{34} = \frac{t}{2} \left( \frac{1 + c_{12}}{1 - c_{12} c_{21}} \right), \qquad k_{2} \cdot p_{34} = -\frac{t}{2} \left( \frac{1 + c_{21}}{1 - c_{12} c_{21}} \right).
 \end{equation}
 Hence,
 \begin{equation}
-	a_{12} = \frac{t}{s} \left[ \frac{(1 + c_{34}) (1 + c_{43})^{2}}{1 - c_{34} c_{43}} \right], \qquad b_{12} = -\frac{t}{s} \left[ \frac{(1 + c_{34})^{2} (1 + c_{43})}{1 - c_{34} c_{43}} \right].
+	a_{34} = \frac{t}{s} \left[ \frac{(1 + c_{12}) (1 + c_{21})^{2}}{1 - c_{12} c_{21}} \right], \qquad b_{34} = -\frac{t}{s} \left[ \frac{(1 + c_{12})^{2} (1 + c_{21})}{1 - c_{12} c_{21}} \right].
 \end{equation}
-Using $|p_{12}|^{2} = -t$ it follows that
+Using $\abs{p_{12}}^{2} = -t$ it follows that
 \begin{equation}
-	|p_{\perp}|^{2} = -t - 2 a_{12} b_{12} (k_{3} \cdot k_{4}) = -t - 2 \left[ \frac{(k_{3} \cdot p_{12}) (k_{4} \cdot p_{12})}{(k_{3} \cdot k_{4})} \right],
+	\abs{P_{34}}^{2} = -t - 2 a_{34} b_{34} \left(k_{1} \cdot k_{2}\right) = -t - 2 \left[ \frac{\left(k_{1} \cdot p_{34}\right) \left(k_{2} \cdot p_{34}\right)}{\left(k_{1} \cdot k_{2}\right)} \right],
 \end{equation}
 which can be written as
 \begin{equation}
-	|p_{\perp}|^{2} = -t \left( 1 + \frac{t}{s} \frac{(1 + c_{34})^{2}(1 + c_{43})^{2}}{(1 - c_{34} c_{43})^{2}} \right).
+	\abs{P_{34}}^{2} = -t \left( 1 + \frac{t}{s} \frac{(1 + c_{12})^{2}(1 + c_{21})^{2}}{(1 - c_{12} c_{21})^{2}} \right).
 \end{equation}
-The terms in the denominator become:
+The terms in the denominator in (\ref{eq:sudakov_B_A}) become:
 \begin{align}
-	|q - p_{12}|^{2} &= 2 (a_{q} - a_{12})(b_{q} - b_{12})(k_{3} \cdot k_{4}) + |q_{\perp} - p_{\perp}|^{2}, \\
-	|q + p_{3}|^{2} + m_{\Phi}^{2} &= 2 (a_{q} + 1)(b_{q} + c_{34})(k_{3} \cdot k_{4}) + |q_{\perp}|^{2} + m_{\Phi}^{2}, \\
-	|q|^{2} &= 2 a_{q} b_{q} (k_{3} \cdot k_{4}) + |q_{\perp}|^{2}, \\
-	|q - p_{4}|^{2} + m_{\Psi}^{2} &= 2 (a_{q} - c_{43})(b_{q} - 1)(k_{3} \cdot k_{4}) + |q_{\perp}|^{2} + m_{\Psi}^{2}.
+	\abs{q}^{2} &= \abs{Q}^{2} + 2 a_{q} b_{q} \left(k_{1} \cdot k_{2}\right), \\
+	\abs{q - p_{31}}^{2} + m_{1}^{2} &= \abs{Q}^{2} + m_{1}^{2} + 2 \left(a_{q} + 1\right)\left(b_{q} + c_{12}\right)\left(k_{1} \cdot k_{2}\right), \\
+	\abs{q - p_{34}}^{2} &= \abs{Q - P_{34}}^{2} + 2 \left(a_{q} - a_{34}\right)\left(b_{q} - b_{34}\right)\left(k_{1} \cdot k_{2}\right), \\
+	\abs{q + p_{42}}^{2} + m_{2}^{2} &= \abs{Q}^{2} + m_{2}^{2} + 2 \left(a_{q} - c_{21}\right)\left(b_{q} - 1\right)\left(k_{1} \cdot k_{2}\right).
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Feynman Moduli}
@@ -214,9 +214,5 @@ There are two one-loop vacuum polarizations:
 ...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Forward-JWKB Limit}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Phase Space}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ...
