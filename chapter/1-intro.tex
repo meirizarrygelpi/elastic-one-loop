@@ -62,11 +62,11 @@ Due to the conservation constraint, it follows that
 \end{equation}
 An important function is
 \begin{equation}
-	\Lambda(s) = [s - (m_{1} - m_{2})^{2}] [s - (m_{1} + m_{2})^{2}].
+	\Lambda_{12}(s) = [s - (m_{1} - m_{2})^{2}] [s - (m_{1} + m_{2})^{2}].
 \end{equation}
-This is known as the K\"{a}ll\'{e}n function. Note that $\Lambda(s)$ can also be written as
+This is known as the K\"{a}ll\'{e}n function. Note that $\Lambda_{12}(s)$ can also be written as
 \begin{equation}
-	\Lambda(s) = (s - m_{1}^{2} - m_{2}^{2})^{2} - 4 m_{1}^{2} m_{2}^{2}.
+	\Lambda_{12}(s) = (s - m_{1}^{2} - m_{2}^{2})^{2} - 4 m_{1}^{2} m_{2}^{2}.
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Change of Variables}
@@ -163,3 +163,69 @@ where I have used $\abs{p_{34}}^{2} = -t$.
 \section{Massive Propagators Between Two Points}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Outgoing Null Sudakov Momenta}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let $k_{3}$ and $k_{4}$ be null momenta related to the outgoing momenta via the transformation:
+\begin{equation}
+	p_{3} = k_{3} + c_{34} k_{4}, \qquad p_{4} = k_{4} + c_{43} k_{3}.
+\end{equation}
+Then,
+\begin{align}
+	m_{1}^{2} = - \abs{p_{3}}^{2} \quad &\Longrightarrow \quad m_{1}^{2} = - 2 c_{34} \left( k_{3} \cdot k_{4} \right), \\
+	m_{2}^{2} = - \abs{p_{4}}^{2} \quad &\Longrightarrow \quad m_{2}^{2} = - 2 c_{43} \left( k_{3} \cdot k_{4} \right), \\
+	s = - \abs{p_{3} + p_{4}}^{2} \quad &\Longrightarrow \quad s = - 2 \left(1 + c_{34} \right) \left(1 + c_{43} \right) \left( k_{3} \cdot k_{4} \right).
+\end{align}
+Solving these equations yields
+\begin{equation}
+	c_{34} = \frac{2 m_{1}^{2}}{s - m_{1}^{2} - m_{2}^{2} \mp \sqrt{\Lambda_{12}(s)}}, \qquad c_{43} = \frac{2 m_{2}^{2}}{s - m_{1}^{2} - m_{2}^{2} \mp \sqrt{\Lambda_{12}(s)}};
+\end{equation}
+and
+\begin{equation}
+	k_{3} \cdot k_{4} = -\frac{1}{2} \left( s - m_{1}^{2} - m_{2}^{2} \mp \sqrt{\Lambda_{12}(s)} \right).
+\end{equation}
+There are two solutions; I will choose the one with the negative sign.
+Note that
+\begin{align}
+	1 + c_{34} &= \frac{s + m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}(s)}}{s - m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}(s)}} = \frac{s - m_{1}^{2} + m_{2}^{2} + \sqrt{\Lambda_{12}(s)}}{2m_{2}^{2}}, \\
+	1 + c_{43} &= \frac{s - m_{1}^{2} + m_{2}^{2} - \sqrt{\Lambda_{12}(s)}}{s - m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}(s)}} = \frac{s + m_{1}^{2} - m_{2}^{2} + \sqrt{\Lambda_{12}(s)}}{2m_{1}^{2}};
+\end{align}
+and
+\begin{equation}
+	c_{34}c_{43} = \frac{s - m_{1}^{2} - m_{2}^{2} + \sqrt{\Lambda_{12}(s)}}{s - m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}(s)}}.
+\end{equation}
+You also have
+\begin{align}
+	c_{34} \left( \frac{1 + c_{43}}{1 + c_{34}} \right) &= \frac{s + m_{1}^{2} - m_{2}^{2} + \sqrt{\Lambda_{12}(s)}}{s + m_{1}^{2} - m_{2}^{2} - \sqrt{\Lambda_{12}(s)}}, \\
+	c_{43} \left( \frac{1 + c_{34}}{1 + c_{43}} \right) &= \frac{s - m_{1}^{2} + m_{2}^{2} + \sqrt{\Lambda_{12}(s)}}{s - m_{1}^{2} + m_{2}^{2} - \sqrt{\Lambda_{12}(s)}}.
+\end{align}
+The inverse transformation is
+\begin{equation}
+	k_{3} = \frac{p_{3} - c_{34} p_{4}}{1 - c_{34} c_{43}}, \qquad k_{4} = \frac{p_{4} - c_{43} p_{3}}{1 - c_{34} c_{43}}.
+\end{equation}
+Thus,
+\begin{align}
+	p_{1} \cdot k_{3} &= \frac{p_{1} \cdot p_{3} - c_{34} \left( p_{1} \cdot p_{4} \right)}{1 - c_{34} c_{43}} = \frac{ t - 2m_{1}^{2} - c_{34} \left( u - m_{1}^{2} - m_{2}^{2} \right) }{2 \left(1 - c_{34} c_{43} \right)}, \\
+	p_{2} \cdot k_{3} &= \frac{p_{2} \cdot p_{3} - c_{34} \left( p_{2} \cdot p_{4} \right)}{1 - c_{34} c_{43}} = \frac{ u - m_{1}^{2} - m_{2}^{2} - c_{34} \left( t - 2m_{2}^{2} \right) }{2 \left(1 - c_{34} c_{43} \right)}, \\
+	p_{3} \cdot k_{3} &= \frac{\abs{p_{3}}^{2} - c_{34} \left( p_{3} \cdot p_{4} \right)}{1 - c_{34} c_{43}} = \frac{ c_{34} \left( s - m_{1}^{2} - m_{2}^{2} \right) - 2m_{1}^{2} }{2 \left(1 - c_{34} c_{43} \right)}, \\
+	p_{4} \cdot k_{3} &= \frac{p_{3} \cdot p_{4} - c_{34} \abs{p_{4}}^{2}}{1 - c_{34} c_{43}} = \frac{ m_{1}^{2} + m_{2}^{2} - s + 2 c_{34} m_{2}^{2} }{2 \left(1 - c_{34} c_{43} \right)};
+\end{align}
+and
+\begin{align}
+	p_{1} \cdot k_{4} &= \frac{p_{1} \cdot p_{4} - c_{43} \left( p_{1} \cdot p_{3} \right)}{1 - c_{34} c_{43}} = \frac{u - m_{1}^{2} - m_{2}^{2} - c_{43} \left(t - 2 m_{1}^{2} \right)}{2 \left( 1 - c_{34} c_{43} \right)}, \\
+	p_{2} \cdot k_{4} &= \frac{p_{2} \cdot p_{4} - c_{43} \left( p_{2} \cdot p_{3} \right)}{1 - c_{34} c_{43}} = \frac{t - 2m_{2}^{2} - c_{43} \left( u - m_{1}^{2} - m_{2}^{2} \right)}{2 \left( 1 - c_{34} c_{43} \right)}, \\
+	p_{3} \cdot k_{4} &= \frac{p_{3} \cdot p_{4} - c_{43} \abs{p_{3}}^{2}}{1 - c_{34} c_{43}} = \frac{m_{1}^{2} + m_{2}^{2} - s + 2 c_{43} m_{1}^{2}}{2 \left( 1 - c_{34} c_{43} \right)}, \\
+	p_{4} \cdot k_{4} &= \frac{ \abs{p_{4}}^{2} - c_{43} \left( p_{3} \cdot p_{4} \right)}{1 - c_{34} c_{43}} = \frac{c_{43} \left( s - m_{1}^{2} - m_{2}^{2} \right) - 2 m_{2}^{2}}{2 \left( 1 - c_{34} c_{43} \right)}.
+\end{align}
+It follows that
+\begin{align}
+	\left(p_{1} + p_{2} \right) \cdot k_{3} &= \left(p_{3} + p_{4} \right) \cdot k_{3} = \frac{m_{2}^{2} - m_{1}^{2} - s - c_{34} \left( m_{1}^{2} - m_{2}^{2} - s \right) }{2 \left( 1 - c_{34} c_{43} \right)}, \\
+	\left(p_{1} - p_{3} \right) \cdot k_{3} &= \left(p_{4} - p_{2} \right) \cdot k_{3} = \frac{t}{2} \left( \frac{1 + c_{34}}{ 1 - c_{34} c_{43} } \right), \\
+	\left(p_{1} - p_{4} \right) \cdot k_{3} &= \left(p_{3} - p_{2} \right) \cdot k_{3} = \frac{m_{2}^{2} - m_{1}^{2} - u + c_{34} \left( m_{1}^{2} - m_{2}^{2} - u \right) }{2 \left( 1 - c_{34} c_{43} \right)};
+\end{align}
+and
+\begin{align}
+	\left(p_{1} + p_{2} \right) \cdot k_{4} &= \left(p_{3} + p_{4} \right) \cdot k_{4} = \frac{m_{1}^{2} - m_{2}^{2} - s - c_{43} \left( m_{2}^{2} - m_{1}^{2} - s \right) }{2 \left( 1 - c_{34} c_{43} \right)}, \\
+	\left(p_{1} - p_{3} \right) \cdot k_{4} &= \left(p_{4} - p_{2} \right) \cdot k_{4} = -\frac{t}{2} \left( \frac{1 + c_{43}}{ 1 - c_{34} c_{43} } \right), \\
+	\left(p_{1} - p_{4} \right) \cdot k_{4} &= \left(p_{3} - p_{2} \right) \cdot k_{4} = \frac{u - m_{1}^{2} + m_{2}^{2} + c_{43} \left( u + m_{1}^{2} - m_{2}^{2} \right) }{2 \left( 1 - c_{34} c_{43} \right)}.
+\end{align}
