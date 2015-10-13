@@ -168,18 +168,18 @@ where I have used $\abs{p_{34}}^{2} = -t$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Let $k_{3}$ and $k_{4}$ be null momenta related to the outgoing momenta via the transformation:
 \begin{equation}
-	p_{3} = k_{3} + b_{3} k_{4}, \qquad p_{4} = k_{4} + a_{4} k_{3}.
+	p_{3} = k_{3} + \kappa_{34} k_{4}, \qquad p_{4} = k_{4} + \kappa_{43} k_{3}.
 	\label{eq:sudakov_3_4}
 \end{equation}
 Then,
 \begin{align}
-	m_{3}^{2} = - \abs{p_{3}}^{2} \quad &\Longrightarrow \quad m_{3}^{2} = - 2 b_{3} \left( k_{3} \cdot k_{4} \right), \\
-	m_{4}^{2} = - \abs{p_{4}}^{2} \quad &\Longrightarrow \quad m_{4}^{2} = - 2 a_{4} \left( k_{3} \cdot k_{4} \right), \\
-	s = - \abs{p_{3} + p_{4}}^{2} \quad &\Longrightarrow \quad s = - 2 \left(1 + b_{3} \right) \left(1 + a_{4} \right) \left( k_{3} \cdot k_{4} \right).
+	m_{3}^{2} = - \abs{p_{3}}^{2} \quad &\Longrightarrow \quad m_{3}^{2} = - 2 \kappa_{34} \left( k_{3} \cdot k_{4} \right), \\
+	m_{4}^{2} = - \abs{p_{4}}^{2} \quad &\Longrightarrow \quad m_{4}^{2} = - 2 \kappa_{43} \left( k_{3} \cdot k_{4} \right), \\
+	s = - \abs{p_{3} + p_{4}}^{2} \quad &\Longrightarrow \quad s = - 2 \left(1 + \kappa_{34} \right) \left(1 + \kappa_{43} \right) \left( k_{3} \cdot k_{4} \right).
 \end{align}
 Solving these equations yield
 \begin{equation}
-	b_{3} = \frac{2 m_{3}^{2}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad a_{4} = \frac{2 m_{4}^{2}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}};
+	\kappa_{34} = \frac{2 m_{3}^{2}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad \kappa_{43} = \frac{2 m_{4}^{2}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}};
 \end{equation}
 and
 \begin{equation}
@@ -187,105 +187,105 @@ and
 \end{equation}
 You have
 \begin{equation}
-	b_{3} a_{4} = \frac{s - m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}},
+	\kappa_{34} \kappa_{43} = \frac{s - m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}},
 \end{equation}
 \begin{equation}
-	1 + b_{3} a_{4} = \frac{ 2 \left( s - m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad
-	1 - b_{3} a_{4} = \frac{ 2 \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}};
+	1 + \kappa_{34} \kappa_{43} = \frac{ 2 \left( s - m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad
+	1 - \kappa_{34} \kappa_{43} = \frac{ 2 \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}};
 \end{equation}
 and
 \begin{equation}
-	b_{3} + a_{4} = \frac{ 2 \left( m_{3}^{2} + m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad
-	b_{3} - a_{4} = \frac{ 2 \left( m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}.
+	\kappa_{34} + \kappa_{43} = \frac{ 2 \left( m_{3}^{2} + m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad
+	\kappa_{34} - \kappa_{43} = \frac{ 2 \left( m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}.
 \end{equation}
 Also
 \begin{align}
-	1 + b_{3} &= \frac{s + m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}} = \frac{s - m_{3}^{2} + m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}{2m_{4}^{2}}, \\
-	1 + a_{4} &= \frac{s - m_{3}^{2} + m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}} = \frac{s + m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}{2m_{3}^{2}};
+	1 + \kappa_{34} &= \frac{s + m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}} = \frac{s - m_{3}^{2} + m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}{2m_{4}^{2}}, \\
+	1 + \kappa_{43} &= \frac{s - m_{3}^{2} + m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}} = \frac{s + m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}{2m_{3}^{2}};
 \end{align}
 and
 \begin{equation}
-	1 - b_{3} = \frac{s - 3m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad
-	1 - a_{4} = \frac{s - m_{3}^{2} - 3m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}.
+	1 - \kappa_{34} = \frac{s - 3m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \qquad
+	1 - \kappa_{43} = \frac{s - m_{3}^{2} - 3m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}.
 \end{equation}
 Thus
 \begin{align}
-	\left( 1 + b_{3} \right) \left( 1 + a_{4} \right) &= \frac{2s}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \\
-	\left( 1 - b_{3} \right) \left( 1 + a_{4} \right) &= \frac{ 2 \sqrt{\Lambda_{34}(s)} - 2 \left( m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \\
-	\left( 1 + b_{3} \right) \left( 1 - a_{4} \right) &= \frac{ 2 \sqrt{\Lambda_{34}(s)} + 2 \left( m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \\
-	\left( 1 - b_{3} \right) \left( 1 - a_{4} \right) &= \frac{ 2 \left( s - 2m_{3}^{2} - 2m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}.
+	\left( 1 + \kappa_{34} \right) \left( 1 + \kappa_{43} \right) &= \frac{2s}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \\
+	\left( 1 - \kappa_{34} \right) \left( 1 + \kappa_{43} \right) &= \frac{ 2 \sqrt{\Lambda_{34}(s)} - 2 \left( m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \\
+	\left( 1 + \kappa_{34} \right) \left( 1 - \kappa_{43} \right) &= \frac{ 2 \sqrt{\Lambda_{34}(s)} + 2 \left( m_{3}^{2} - m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}, \\
+	\left( 1 - \kappa_{34} \right) \left( 1 - \kappa_{43} \right) &= \frac{ 2 \left( s - 2m_{3}^{2} - 2m_{4}^{2} \right)}{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}.
 \end{align}
 
 These expressions are relevant to the outgoing speeds in the center-of-momentum frame:
 \begin{equation}
-	\frac{1 - b_{3} a_{4}}{1 + 2 b_{3} + b_{3} a_{4}} = \frac{\sqrt{\Lambda_{34}(s)}}{s + m_{3}^{2} - m_{4}^{2}}, \qquad \frac{1 - b_{3} a_{4}}{1 + 2 a_{4} + b_{3} a_{4}} = \frac{\sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} + m_{4}^{2}}.
+	\frac{1 - \kappa_{34} \kappa_{43}}{1 + 2 \kappa_{34} + \kappa_{34} \kappa_{43}} = \frac{\sqrt{\Lambda_{34}(s)}}{s + m_{3}^{2} - m_{4}^{2}}, \qquad \frac{1 - \kappa_{34} \kappa_{43}}{1 + 2 \kappa_{43} + \kappa_{34} \kappa_{43}} = \frac{\sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} + m_{4}^{2}}.
 \end{equation}
 Other relevant results are
 \begin{align}
-	\frac{1}{b_{3}} \left( \frac{1 + b_{3}}{1 + a_{4}} \right) &= \frac{s + m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s + m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}, \\
-	\frac{1}{a_{4}} \left( \frac{1 + a_{4}}{1 + b_{3}} \right) &= \frac{s - m_{3}^{2} + m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} + m_{4}^{2} - \sqrt{\Lambda_{34}(s)}};
+	\frac{1}{\kappa_{34}} \left( \frac{1 + \kappa_{34}}{1 + \kappa_{43}} \right) &= \frac{s + m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s + m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}, \\
+	\frac{1}{\kappa_{43}} \left( \frac{1 + \kappa_{43}}{1 + \kappa_{34}} \right) &= \frac{s - m_{3}^{2} + m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} + m_{4}^{2} - \sqrt{\Lambda_{34}(s)}};
 \end{align}
 and
 \begin{equation}
-	\frac{1}{b_{3}a_{4}} = \frac{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}.
+	\frac{1}{\kappa_{34}\kappa_{43}} = \frac{s - m_{3}^{2} - m_{4}^{2} + \sqrt{\Lambda_{34}(s)}}{s - m_{3}^{2} - m_{4}^{2} - \sqrt{\Lambda_{34}(s)}}.
 \end{equation}
 The logarithm of these expressions are related to rapidities in the center-of-momentum frame.
 
 The inverse of (\ref{eq:sudakov_3_4}) is
 \begin{equation}
-	k_{3} = \frac{p_{3} - b_{3} p_{4}}{1 - b_{3} a_{4}}, \qquad k_{4} = \frac{p_{4} - a_{4} p_{3}}{1 - b_{3} a_{4}}.
+	k_{3} = \frac{p_{3} - \kappa_{34} p_{4}}{1 - \kappa_{34} \kappa_{43}}, \qquad k_{4} = \frac{p_{4} - \kappa_{43} p_{3}}{1 - \kappa_{34} \kappa_{43}}.
 \end{equation}
 Thus,
 \begin{align}
-	p_{1} \cdot k_{3} &= \frac{p_{1} \cdot p_{3} - b_{3} \left( p_{1} \cdot p_{4} \right)}{1 - b_{3} a_{4}} = \frac{ t - 2m_{3}^{2} - b_{3} \left( u - m_{3}^{2} - m_{4}^{2} \right) }{2 \left(1 - b_{3} a_{4} \right)}, \\
-	p_{2} \cdot k_{3} &= \frac{p_{2} \cdot p_{3} - b_{3} \left( p_{2} \cdot p_{4} \right)}{1 - b_{3} a_{4}} = \frac{ u - m_{3}^{2} - m_{4}^{2} - b_{3} \left( t - 2m_{4}^{2} \right) }{2 \left(1 - b_{3} a_{4} \right)}, \\
-	p_{3} \cdot k_{3} &= \frac{\abs{p_{3}}^{2} - b_{3} \left( p_{3} \cdot p_{4} \right)}{1 - b_{3} a_{4}} = \frac{ b_{3} \left( s - m_{3}^{2} - m_{4}^{2} \right) - 2m_{3}^{2} }{2 \left(1 - b_{3} a_{4} \right)}, \\
-	p_{4} \cdot k_{3} &= \frac{p_{3} \cdot p_{4} - b_{3} \abs{p_{4}}^{2}}{1 - b_{3} a_{4}} = \frac{ m_{3}^{2} + m_{4}^{2} - s + 2 b_{3} m_{4}^{2} }{2 \left(1 - b_{3} a_{4} \right)};
+	p_{1} \cdot k_{3} &= \frac{p_{1} \cdot p_{3} - \kappa_{34} \left( p_{1} \cdot p_{4} \right)}{1 - \kappa_{34} \kappa_{43}} = \frac{ t - 2m_{3}^{2} - \kappa_{34} \left( u - m_{3}^{2} - m_{4}^{2} \right) }{2 \left(1 - \kappa_{34} \kappa_{43} \right)}, \\
+	p_{2} \cdot k_{3} &= \frac{p_{2} \cdot p_{3} - \kappa_{34} \left( p_{2} \cdot p_{4} \right)}{1 - \kappa_{34} \kappa_{43}} = \frac{ u - m_{3}^{2} - m_{4}^{2} - \kappa_{34} \left( t - 2m_{4}^{2} \right) }{2 \left(1 - \kappa_{34} \kappa_{43} \right)}, \\
+	p_{3} \cdot k_{3} &= \frac{\abs{p_{3}}^{2} - \kappa_{34} \left( p_{3} \cdot p_{4} \right)}{1 - \kappa_{34} \kappa_{43}} = \frac{ \kappa_{34} \left( s - m_{3}^{2} - m_{4}^{2} \right) - 2m_{3}^{2} }{2 \left(1 - \kappa_{34} \kappa_{43} \right)}, \\
+	p_{4} \cdot k_{3} &= \frac{p_{3} \cdot p_{4} - \kappa_{34} \abs{p_{4}}^{2}}{1 - \kappa_{34} \kappa_{43}} = \frac{ m_{3}^{2} + m_{4}^{2} - s + 2 \kappa_{34} m_{4}^{2} }{2 \left(1 - \kappa_{34} \kappa_{43} \right)};
 \end{align}
 and
 \begin{align}
-	p_{1} \cdot k_{4} &= \frac{p_{1} \cdot p_{4} - a_{4} \left( p_{1} \cdot p_{3} \right)}{1 - b_{3} a_{4}} = \frac{u - m_{3}^{2} - m_{4}^{2} - a_{4} \left(t - 2 m_{3}^{2} \right)}{2 \left( 1 - b_{3} a_{4} \right)}, \\
-	p_{2} \cdot k_{4} &= \frac{p_{2} \cdot p_{4} - a_{4} \left( p_{2} \cdot p_{3} \right)}{1 - b_{3} a_{4}} = \frac{t - 2m_{4}^{2} - a_{4} \left( u - m_{3}^{2} - m_{4}^{2} \right)}{2 \left( 1 - b_{3} a_{4} \right)}, \\
-	p_{3} \cdot k_{4} &= \frac{p_{3} \cdot p_{4} - a_{4} \abs{p_{3}}^{2}}{1 - b_{3} a_{4}} = \frac{m_{3}^{2} + m_{4}^{2} - s + 2 a_{4} m_{3}^{2}}{2 \left( 1 - b_{3} a_{4} \right)}, \\
-	p_{4} \cdot k_{4} &= \frac{ \abs{p_{4}}^{2} - a_{4} \left( p_{3} \cdot p_{4} \right)}{1 - b_{3} a_{4}} = \frac{a_{4} \left( s - m_{3}^{2} - m_{4}^{2} \right) - 2 m_{4}^{2}}{2 \left( 1 - b_{3} a_{4} \right)}.
+	p_{1} \cdot k_{4} &= \frac{p_{1} \cdot p_{4} - \kappa_{43} \left( p_{1} \cdot p_{3} \right)}{1 - \kappa_{34} \kappa_{43}} = \frac{u - m_{3}^{2} - m_{4}^{2} - \kappa_{43} \left(t - 2 m_{3}^{2} \right)}{2 \left( 1 - \kappa_{34} \kappa_{43} \right)}, \\
+	p_{2} \cdot k_{4} &= \frac{p_{2} \cdot p_{4} - \kappa_{43} \left( p_{2} \cdot p_{3} \right)}{1 - \kappa_{34} \kappa_{43}} = \frac{t - 2m_{4}^{2} - \kappa_{43} \left( u - m_{3}^{2} - m_{4}^{2} \right)}{2 \left( 1 - \kappa_{34} \kappa_{43} \right)}, \\
+	p_{3} \cdot k_{4} &= \frac{p_{3} \cdot p_{4} - \kappa_{43} \abs{p_{3}}^{2}}{1 - \kappa_{34} \kappa_{43}} = \frac{m_{3}^{2} + m_{4}^{2} - s + 2 \kappa_{43} m_{3}^{2} }{2 \left( 1 - \kappa_{34} \kappa_{43} \right)}, \\
+	p_{4} \cdot k_{4} &= \frac{ \abs{p_{4}}^{2} - \kappa_{43} \left( p_{3} \cdot p_{4} \right)}{1 - \kappa_{34} \kappa_{43}} = \frac{\kappa_{43} \left( s - m_{3}^{2} - m_{4}^{2} \right) - 2 m_{4}^{2}}{2 \left( 1 - \kappa_{34} \kappa_{43} \right)}.
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Sudakov Null Decomposition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Given a spacetime vector $v$, the Sudakov null decomposition is given by
 \begin{equation}
-	v = V + a_{v} k_{3} + b_{v} k_{4}, \qquad V \cdot k_{3} = V \cdot k_{4} = 0.
+	v = V + \kappa_{v3} k_{3} + \kappa_{v4} k_{4}, \qquad V \cdot k_{3} = V \cdot k_{4} = 0.
 \end{equation}
-Here $V$ lives in the orthogonal complement to the Sudakov subspace, and $a_{v}$ and $b_{v}$ are the Sudakov moduli. Since the Sudakov momenta are null, you have
+Here $V$ lives in the orthogonal complement to the Sudakov subspace, and $\kappa_{v3}$ and $\kappa_{v4}$ are the Sudakov moduli. Since the Sudakov momenta are null, you have
 \begin{equation}
-	a_{v} = \frac{v \cdot k_{4}}{k_{3} \cdot k_{4}}, \qquad b_{v} = \frac{v \cdot k_{3}}{k_{3} \cdot k_{4}}.
+	\kappa_{v3} = \frac{v \cdot k_{4}}{k_{3} \cdot k_{4}}, \qquad \kappa_{v4} = \frac{v \cdot k_{3}}{k_{3} \cdot k_{4}}.
 \end{equation}
 Thus,
 \begin{equation}
-	\abs{V}^{2} = \abs{v}^{2} - 2 a_{v} b_{v} \left( k_{3} \cdot k_{4} \right).
+	\abs{V}^{2} = \abs{v}^{2} - 2 \kappa_{v3} \kappa_{v4} \left( k_{3} \cdot k_{4} \right).
 \end{equation}
 The external momenta split into the incoming set ($p_{1}$ and $p_{2}$) and the outgoing set ($p_{3}$ and $p_{4}$). You have already null-decomposed the outgoing set by introducing the Sudakov momenta in (\ref{eq:sudakov_3_4}). Hence, by definition, the outgoing set live in the Sudakov subspace. The Sudakov null decomposition of the incoming set is
 \begin{equation}
-	p_{1} = P_{1} + a_{1} k_{3} + b_{1} k_{4}, \qquad p_{2} = P_{2} + a_{2} k_{3} + b_{2} k_{4}.
+	p_{1} = P_{1} + \kappa_{13} k_{3} + \kappa_{14} k_{4}, \qquad p_{2} = P_{2} + \kappa_{23} k_{3} + \kappa_{24} k_{4}.
 \end{equation}
 Using the conservation constraint, you find
 \begin{equation}
-	P_{1} + P_{2} + \left( a_{1} + a_{2} \right) k_{3} + \left( b_{1} + b_{2} \right) k_{4} = \left( 1 + a_{4} \right) k_{3} + \left( 1 + b_{3} \right) k_{4}.
+	P_{1} + P_{2} + \left( \kappa_{13} + \kappa_{23} \right) k_{3} + \left( \kappa_{14} + \kappa_{24} \right) k_{4} = \left( 1 + \kappa_{43} \right) k_{3} + \left( 1 + \kappa_{34} \right) k_{4}.
 \end{equation}
 This leads to three relations:
 \begin{equation}
-	P_{1} + P_{2} = 0, \qquad a_{1} + a_{2} = 1 + a_{4}, \qquad b_{1} + b_{2} = 1 + b_{3}.
+	P_{1} + P_{2} = 0, \qquad \kappa_{13} + \kappa_{23} = 1 + \kappa_{43}, \qquad \kappa_{14} + \kappa_{24} = 1 + \kappa_{34}.
 	\label{eq:conv_rel}
 \end{equation}
 You have
 \begin{equation}
-	a_{1} = \frac{a_{4} \left( t - 2 m_{3}^{2} \right) - \left( u - m_{3}^{2} - m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}, \qquad
-	b_{1} = \frac{b_{3} \left( u - m_{3}^{2} - m_{4}^{2} \right) - \left( t - 2 m_{3}^{2} \right) }{\sqrt{\Lambda_{34}(s)}};
+	\kappa_{13} = \frac{\kappa_{43} \left( t - 2 m_{3}^{2} \right) - \left( u - m_{3}^{2} - m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}, \qquad
+	\kappa_{14} = \frac{\kappa_{34} \left( u - m_{3}^{2} - m_{4}^{2} \right) - \left( t - 2 m_{3}^{2} \right) }{\sqrt{\Lambda_{34}(s)}};
 \end{equation}
 and
 \begin{equation}
-	a_{2} = \frac{a_{4} \left( u - m_{3}^{2} - m_{4}^{2} \right) - \left( t - 2 m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}, \qquad
-	b_{2} = \frac{b_{3} \left( t - 2 m_{4}^{2} \right) - \left( u - m_{3}^{2} - m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}.
+	\kappa_{23} = \frac{\kappa_{43} \left( u - m_{3}^{2} - m_{4}^{2} \right) - \left( t - 2 m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}, \qquad
+	\kappa_{24} = \frac{\kappa_{34} \left( t - 2 m_{4}^{2} \right) - \left( u - m_{3}^{2} - m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}.
 \end{equation}
 With the null decomposition of the external momenta, you can null-decompose any other combination of external momenta. Let
 \begin{equation}
@@ -297,32 +297,32 @@ These are the spacetime vectors that yield the Mandelstam invariants:
 \end{equation}
 The Sudakov null decomposition of these momenta is
 \begin{equation}
-	p = P + a_{p} k_{3} + b_{p} k_{4}, \qquad q = Q + a_{q} k_{3} + b_{q} k_{4}, \qquad r = R + a_{r} k_{3} + b_{r} k_{4}.
+	p = P + \kappa_{p3} k_{3} + \kappa_{p4} k_{4}, \qquad q = Q + \kappa_{q3} k_{3} + \kappa_{q4} k_{4}, \qquad r = R + \kappa_{r3} k_{3} + \kappa_{r4} k_{4}.
 \end{equation}
 Using the null decomposition of the external momenta yields:
 \begin{align}
-	P = P_{1} + P_{2} = 0, \qquad a_{p} &= a_{1} + a_{2} = 1 + a_{4}, \qquad b_{p} = b_{1} + b_{2} = 1 + b_{3}; \\
-	Q = P_{1} = -P_{2}, \qquad a_{q} &= a_{1} - 1 = a_{4} - a_{2}, \qquad b_{q} = b_{1} - b_{3} = 1 - b_{2}; \\
-	R = P_{1} = -P_{2}, \qquad a_{r} &= a_{1} - a_{4} = 1 - a_{2}, \qquad b_{r} = b_{1} - 1 = b_{3} - b_{2}.
+	P = P_{1} + P_{2} = 0, \qquad \kappa_{p3} &= \kappa_{13} + \kappa_{23} = 1 + \kappa_{43}, \qquad \kappa_{p4} = \kappa_{14} + \kappa_{24} = 1 + \kappa_{34}; \\
+	Q = P_{1} = -P_{2}, \qquad \kappa_{q3} &= \kappa_{13} - 1 = \kappa_{43} - \kappa_{23}, \qquad \kappa_{q4} = \kappa_{14} - \kappa_{34} = 1 - \kappa_{24}; \\
+	R = P_{1} = -P_{2}, \qquad \kappa_{r3} &= \kappa_{13} - \kappa_{43} = 1 - \kappa_{23}, \qquad \kappa_{r4} = \kappa_{14} - 1 = \kappa_{34} - \kappa_{24}.
 \end{align}
 Explicitly,
 \begin{align}
-	a_{1} + a_{2} &= \frac{ \left(s - m_{3}^{2} + m_{4}^{2}\right) - a_{4} \left(s + m_{3}^{2} - m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}, \\
-	b_{1} + b_{2} &= \frac{ \left(s + m_{3}^{2} - m_{4}^{2}\right) - b_{3} \left(s - m_{3}^{2} + m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}.
+	\kappa_{13} + \kappa_{23} &= \frac{ \left(s - m_{3}^{2} + m_{4}^{2}\right) - \kappa_{43} \left(s + m_{3}^{2} - m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}, \\
+	\kappa_{14} + \kappa_{24} &= \frac{ \left(s + m_{3}^{2} - m_{4}^{2}\right) - \kappa_{34} \left(s - m_{3}^{2} + m_{4}^{2} \right) }{\sqrt{\Lambda_{34}(s)}}.
 \end{align}
 Using
 \begin{equation}
-	\frac{s + m_{3}^{2} - m_{4}^{2}}{\sqrt{\Lambda_{34}(s)}} = \frac{\left( 1 + b_{3} \right) + b_{3} \left( 1 + a_{4} \right)}{1 - b_{3} a_{4}}, \qquad \frac{s - m_{3}^{2} + m_{4}^{2}}{\sqrt{\Lambda_{34}(s)}} = \frac{\left( 1 + a_{4} \right) + a_{4} \left( 1 + b_{3} \right)}{1 - b_{3} a_{4}};
+	\frac{s + m_{3}^{2} - m_{4}^{2}}{\sqrt{\Lambda_{34}(s)}} = \frac{\left( 1 + \kappa_{34} \right) + \kappa_{34} \left( 1 + \kappa_{43} \right)}{1 - \kappa_{34} \kappa_{43}}, \qquad \frac{s - m_{3}^{2} + m_{4}^{2}}{\sqrt{\Lambda_{34}(s)}} = \frac{\left( 1 + \kappa_{43} \right) + \kappa_{43} \left( 1 + \kappa_{34} \right)}{1 - \kappa_{34} \kappa_{43}};
 \end{equation}
-you find that $a_{p} = 1 + a_{4}$ and $b_{p} = 1 + b_{3}$. This checks the relations from (\ref{eq:conv_rel}). You also have
+you find that $\kappa_{p3} = 1 + \kappa_{43}$ and $\kappa_{p4} = 1 + \kappa_{34}$. This checks the relations from (\ref{eq:conv_rel}). You also have
 \begin{equation}
-	a_{q} = \frac{\left( 1 + a_{4} \right) t}{\sqrt{\Lambda_{34}(s)}}, \qquad
-	b_{q} = -\frac{\left( 1 + b_{3} \right) t}{\sqrt{\Lambda_{34}(s)}};
+	\kappa_{q3} = \frac{\left( 1 + \kappa_{43} \right) t}{\sqrt{\Lambda_{34}(s)}}, \qquad
+	\kappa_{q4} = -\frac{\left( 1 + \kappa_{34} \right) t}{\sqrt{\Lambda_{34}(s)}};
 \end{equation}
 and
 \begin{equation}
-	a_{r} = \frac{\left( 1 + a_{4} \right) t}{\sqrt{\Lambda_{34}(s)}} + 1 - a_{4}, \qquad 
-	b_{r} = - \frac{\left( 1 + b_{3} \right) t}{\sqrt{\Lambda_{34}(s)}} - 1 + b_{3}.
+	\kappa_{r3} = \frac{\left( 1 + \kappa_{43} \right) t}{\sqrt{\Lambda_{34}(s)}} + 1 - \kappa_{43}, \qquad 
+	\kappa_{r4} = - \frac{\left( 1 + \kappa_{34} \right) t}{\sqrt{\Lambda_{34}(s)}} - 1 + \kappa_{34}.
 \end{equation}
 From $t = -\abs{q}^{2}$ it follows that
 \begin{equation}
